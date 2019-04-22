@@ -1,0 +1,28 @@
+<div *ngIf="false">
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-recipes></app-recipes>
+            <app-shopping-list></app-shopping-list>
+        </div>
+    </div>
+</div>
+</div>
+
+<div *ngIf="false">
+<div style="position: relative; padding-top: 20px" class="container">
+<input type="text" [(ngModel)]="name">
+<p>{{ name }}</p>
+<button (click)="show1()">show</button>
+    <app-part-two></app-part-two>
+</div>
+<div *ngIf="show">
+<app-pop [name]="name" (cancell)="delete()"></app-pop>
+</div>
+</div>
+<div *ngIf="true" class="my-5">
+    <div class="container">
+<app-server-element></app-server-element>
+</div>
+</div>

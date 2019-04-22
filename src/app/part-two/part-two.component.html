@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="table">
+<div class="head">
+  <p>user</p>
+</div>
+    <div class="input">
+      <input type="text" [(ngModel)]="add" (keydown.enter)="addUser(add);addSite(add)">
+      <div class="buttons">
+      <button class="btn btn-danger" (click)="addUser(add)">add user</button>
+      <button class="btn btn-success" (click)="addSite(add)">add site</button>
+      </div>
+    </div>
+    <div class="two-side">
+      <div class="side-one">
+<div class="one">
+    <div class="text-center">
+        <span class="mr-1">users</span><a (click)="sort()" *ngIf="i"><img src="../../assets/iconfinder_arrow-top_4115227.png"></a>
+        <a (click)="reverse()" *ngIf="!i"><img src="../../assets/iconfinder_arrow-bottom_4115221.png"></a>
+    </div>
+  <ul *ngIf="users.length">
+    <li *ngFor="let user of users" (click)="edit(user)">
+        <span *ngIf="user!==editUser">{{user.name}}</span>
+        <input *ngIf="user===editUser" [(ngModel)]="user.name"
+               (blur)="update()" (keyup.enter)="update()">
+    </li>
+  </ul>
+
+</div>
+      </div>
+      <div class="side-two">
+<div class="two">
+    <div class="text-center">
+        <span class="mr-1">sites</span><a (click)="sort1()" *ngIf="i1"><img src="../../assets/iconfinder_arrow-top_4115227.png"></a>
+        <a (click)="reverse1()" *ngIf="!i1"><img src="../../assets/iconfinder_arrow-bottom_4115221.png"></a>
+    </div>
+  <ul *ngIf="sites.length">
+    <li *ngFor="let site of sites,let i=index" (click)="onRemove(i)" style="cursor: pointer">
+      {{site}}
+    </li>
+  </ul>
+</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12">
+        <p>Add</p>
+        <label>Name</label>
+       <input type="text" class="form-control" [(ngModel)]="pName">
+        <label>Weight</label>
+      <input type="number" class="form-control" [(ngModel)]="pWeight">
+        <label>Symbol</label>
+        <input type="text" class="form-control" [(ngModel)]="pSymbol">
+        <br>
+        <button
+                class="btn btn-primary"
+                (click)="onAdd()">Add</button>
+    </div>
+</div>

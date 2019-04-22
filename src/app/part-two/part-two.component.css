@@ -1,0 +1,65 @@
+.table{
+    height: 450px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid green;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-bottom: 1px solid green;
+}
+.input{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid green;
+    background-color: darkgrey;
+    padding-left: 10px;
+}
+.input input{
+    border: 1px solid green;
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+}
+.input .buttons{
+    margin-left: 250px;
+}
+.input button{
+    margin: 0 10px;
+}
+.two-side{
+    display: flex;
+    flex-direction: row;
+}
+.side-one{
+    width: 50%;
+    height:328px;
+    border-right: 1px solid green;
+    padding-top: 14px;
+}
+.side-two{
+    width: 50%;
+    height:328px;
+    padding-top: 14px;
+}
+.side-one .one,.side-two .two{
+    width: 90%;
+    height: 300px;
+    border: 1px solid green;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 0;
+
+}
+ul{
+    list-style: none;
+}
+.one img,.two img{
+    width: 15px;
+}
